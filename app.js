@@ -1,3 +1,4 @@
+
 let numeroSecreto = generarNumeroSecreto();
 
 function asignarTextoElemento(elemento, texto){
@@ -8,6 +9,13 @@ function asignarTextoElemento(elemento, texto){
 
 function verificarIntento() {
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
+    if(numeroDeUsuario === numeroSecreto){
+        asignarTextoElemento('p', `Adivinaste El número secreto era ${numeroSecreto}`);
+    }else if(numeroDeUsuario < numeroSecreto){
+        asignarTextoElemento('p', 'el numero secreto es mayor');
+    }else{
+        asignarTextoElemento('p', 'el numero secreto es menor');
+    }
     return;
 }
 
@@ -17,3 +25,4 @@ function generarNumeroSecreto() {
 
 asignarTextoElemento('h1', 'Juego del numero secreto?');
 asignarTextoElemento('p', 'Adivina el número entre 1 y 100');
+
