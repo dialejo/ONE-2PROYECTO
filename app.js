@@ -47,10 +47,7 @@ function reiniciarJuego(){
     //inicializer el numero de intentos
     condicionInicial();
     //deshabilitar el boton de nuevo
-
-    
-    
-
+    document.querySelector('#reiniciar').setAttribute('disabled', 'true');
 }
 
 condicionInicial();
