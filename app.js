@@ -1,5 +1,4 @@
 
-
 let numeroSecreto= 0;
 let intentos = 1;
 let listaNumerosSorteados = [];
